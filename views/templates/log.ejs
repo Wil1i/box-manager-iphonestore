@@ -1,0 +1,5 @@
+<div style="border-radius: 10px; background-color: white; padding: 10px; display: flex; justify-content: space-between; align-items: center; margin: 5px;">
+    <div style="padding: 5px 10px;border-radius: 10px; background-color: rgba(0, 0, 0, .05);box-shadow: 2px 2px 6px 0 rgb(220, 220, 220);"><%= log.title %></div>
+    <small style="font-size: 10px; padding: 5px 10px;border-radius: 10px; background-color: rgba(0, 0, 0, .05);"><%= toToday(log.createdAt) %> توسط <%= log.user %></small>
+    <div style="padding: 5px 10px;border-radius: 10px; background-color: black; color: white;"><%= log.description %></div>
+</div>

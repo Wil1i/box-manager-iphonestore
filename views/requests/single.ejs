@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <%- include("../templates/header.ejs", {title : "آیفون استور", css : "homePage"}) %>
+</head>
+<body>
+  <%- include("../templates/sideBar.ejs") %>
+  <div id="check-container">
+    <div style="display: flex; justify-content: space-between;">
+      <h1>جعبه دستگاه <%= request.customerName %></h1>
+      <div style="color: var(--main); background-color: rgba(228, 246, 253, .7); padding: 2px 5px; border-radius: 7px; text-shadow: 2px 2px 3px skyblue;"><%= request.status %></div>
+    </div>
+    
+    <div style="background-color: white; padding: 10px; border-radius: 10px;">
+        <div style="display: flex; justify-content: space-around; ">
+            <p>شماره مالک  : <%= toPersian(request.customerNumber || 'مالک ثبت نشده') %></p>
+            <p>مدل دستگاه : <%= toPersian(request.phoneModel) %></p>
+        </div>
+        <div style="display: flex; justify-content: space-around; margin: 40px 0;">
+            <p style="font-size: 20px; background-color: #cacaca;text-shadow: 2px 2px 5px rgb(161, 161, 161); padding: 8px 10px; border-radius: 10px; letter-spacing: 4px;">IMEI1 : <%= request.IMEI1 %></p>
+            <p style="font-size: 20px; background-color: #cacaca;text-shadow: 2px 2px 5px rgb(161, 161, 161); padding: 8px 10px; border-radius: 10px; letter-spacing: 4px;">IMEI2 : <%= request.IMEI2 %></p>
+        </div>  
+        <div style="display: flex; justify-content: space-around; ">
+          <p>حافظه  : <%= toPersian(request.capacity) %></p>
+          <p>رنگ دستگاه : <%= toPersian(request.color) %></p>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+          <% if(request.status != "تحویل داده شد"){ %>
+
+            <% if (request.status == "موجود در فروشگاه"){ %>
+
+              <% if(!request.customerName){ %>
+
+                <a class="btn" href="/requests/<%= request.id %>/done">
+                  جعبه تحویل داده شد
+                </a>
+
+              <% }else{ %>
+
+                <form action="/requests/<%= request.id %>/done" method="post">
+                  <button class="btn" type="submit">
+                    جعبه تحویل داده شد
+                  </button>
+                </form>
+
+              <% } %>
+            
+            <% }else{ %>
+              
+              <form action="/requests/<%= request.id %>/done" method="post">
+                <button class="btn" type="submit">
+                  جعبه به فروشگاه رسید
+                </button>
+              </form>
+
+            <% } %>
+
+          <% } %>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

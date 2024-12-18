@@ -1,0 +1,21 @@
+{
+    "port" : PORT,
+    "secret" : "SECRET",
+
+    "db" : {
+        "name" : "NAME",
+        "username" : "USERNAME",
+        "password" : "PASSWORD",
+        "host" : "HOST",
+        "dialect" : "DIALECT"
+    },
+
+    "apis" : {
+        "send" : "SEND_MESSAGE_API"
+    },
+
+    "smsCodes" : {
+        "submitBoxRequest" : SMS_CODE,
+        "boxDelivered" : SMS_CODE
+    }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <%- include("../templates/header.ejs", {title : "آیفون استور", css : "homePage"}) %>
+</head>
+<body>
+  <%- include("../templates/sideBar.ejs") %>
+  <div id="check-container">
+    <div>
+      <h1>ثبت اطلاعات تحویل گیرنده</h1>
+    </div>
+
+    <form action="/requests/<%=id%>/done" method="post" style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+        <div style="width: 100%;">
+            <input type="text" name="name" placeholder="نام و نام خانوادگی">
+            <input type="text" name="number" placeholder="شماره تماس">
+        </div>
+
+        <button type="submit">ثبت</button>
+    </form>
+  </div>
+</body>
+</html>

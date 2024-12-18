@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <%- include("./templates/header.ejs", {title : "آیفون استور", css : "homePage"}) %>
+</head>
+<body>
+  <%- include("./templates/sideBar.ejs") %>
+  <div id="check-container">
+    <div>
+      <h1>استعلام جعبه</h1>
+    </div> 
+
+    <form method="post" action="/search" style="background-color: white; border-radius: 10px;display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <p style="margin-bottom: 10px;">4 رقم آخر IMEI مورد نظر را وارد کنید</p>
+
+        <input name="IMEI1" type="text" placeholder="IMEI1" maxlength="4" minlength="4" required>
+
+        <button type="submit">استعلام</button>
+    </form>
+    
+  </div>
+</body>
+</html>

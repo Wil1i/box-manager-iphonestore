@@ -1,0 +1,9 @@
+<div class="request-container">
+    <p><%=toPersian(user.id)%></p>
+    <p><%=toPersian(user.username)%></p>
+    <p><%=toPersian(user.userRank)%></p>
+    <small><%= toToday(user.createdAt) %></small>
+    <% if(user.username != "shayan"){ %>
+        <a href="/users/<%=user.id%>/delete">حذف</a>
+    <% } %>
+</div>

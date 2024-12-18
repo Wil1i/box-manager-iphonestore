@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <%- include("./templates/header.ejs", {title : "ورود", css : "auth"}) %>
+</head>
+<body>
+  <form action="/auth" method="post" id="container">
+    <h1>ورود</h1>
+    <div>
+      <input type="text" placeholder="نام کاربری" name="username">
+      <input type="password" placeholder="کلمه عبور" name="password">
+    </div>
+    <button>ورود</button>
+  </form>
+</body>
+</html>

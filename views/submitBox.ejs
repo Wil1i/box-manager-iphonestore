@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <%- include("./templates/header.ejs", {title : "آیفون استور", css : "homePage"}) %>
+</head>
+<body>
+  <%- include("./templates/sideBar.ejs") %>
+  <div id="check-container">
+    <div>
+      <h1>ثبت جعبه گوشی</h1>
+    </div>
+
+    <form action="/box" method="post">
+        <div>
+            <p style="font-size: 14px; color: rgb(232, 64, 64);">* این صفحه مخصوص ثبت جعبه های موجود در فروشگاه می‌باشد که ثبت درخواست نشده‌اند. در غیر این صورت به <a href="/submit" class="bluelink">ثبت درخواست</a> و یا <a href="/requests" class="bluelink">جعبه ها</a> مراجعه کنید.</p>
+        </div>
+        <div>
+            <input type="text" name="phoneModel" placeholder="مدل دستگاه">
+            <input type="text" name="IMEI1" placeholder="IMEI1">
+            <input type="text" name="IMEI2" placeholder="IMEI2">
+        </div>
+        <div>
+          <input type="text" placeholder="رنگ" name="color">
+            <select name="capacity">
+              <option value="64 گیگابایت">64 گیگابایت</option>
+              <option value="128 گیگابایت">128 گیگابایت</option>
+              <option value="256 گیگابایت">256 گیگابایت</option>
+              <option value="512 گیگابایت">512 گیگابایت</option>
+              <option value="1 ترابایت">1 ترابایت</option>
+              <option value="2 ترابایت">2 ترابایت</option>
+            </select>
+            <input type="text" style="opacity: 0;">
+        </div>
+
+        <button type="submit">ثبت</button>
+    </form>
+  </div>
+</body>
+</html>

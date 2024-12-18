@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <%- include("./templates/header.ejs", {title : "ثبت نام", css : "auth"}) %>
+</head>
+<body>
+  <form action="/register" method="post" id="container">
+    <h1>ثبت نام</h1>
+    <div>
+      <input type="text" placeholder="نام کاربری" name="username">
+      <input type="password" placeholder="کلمه عبور" name="password">
+      <input type="password" placeholder="تکرار کلمه عبور" name="passwordRepeat">
+    </div>
+    <button>ثبت نام</button>
+  </form>
+</body>
+</html>

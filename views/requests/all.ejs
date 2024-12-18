@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <%- include("../templates/header.ejs", {title : "آیفون استور", css : "homePage"}) %>
+</head>
+<body>
+  <%- include("../templates/sideBar.ejs") %>
+  <div id="check-container">
+    <div>
+      <h1>درخواست‌های جعبه‌ها</h1>
+    </div>
+    
+    <div>
+        <% requests.forEach(request => { %>
+            <%- include("../templates/request.ejs", {request}) -%>
+        <% }) %>
+    </div>
+  </div>
+</body>
+</html>

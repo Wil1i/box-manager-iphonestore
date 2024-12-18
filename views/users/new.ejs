@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <%- include("../templates/header.ejs", {title : "آیفون استور", css : "homePage"}) %>
+</head>
+<body>
+  <%- include("../templates/sideBar.ejs") %>
+  <div id="check-container">
+    <div>
+      <h1>ساخت کاربر</h1>
+    </div>
+
+    <form action="/users/new" method="post">
+        <div>
+            <input type="text" name="username" placeholder="نام کاربر">
+            <input type="text" name="password" placeholder="رمز کاربر">
+            <select name="userRank">
+                <option value="user">کاربر</option>
+                <option value="admin">مدیر</option>
+            </select>
+        </div>
+
+        <button type="submit">ثبت</button>
+    </form>
+  </div>
+</body>
+</html>
