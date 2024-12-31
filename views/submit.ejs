@@ -15,14 +15,14 @@
         <p style="font-size: 14px; color: rgb(232, 64, 64);">* این صفحه مخصوص ثبت جعبه های ناموجود در فروشگاه می‌باشد که باید تولید شوند. در غیر این صورت به <a href="/box" class="bluelink">ثبت جعبه</a> و یا <a href="/requests" class="bluelink">جعبه ها</a> مراجعه کنید.</p>
     </div>
         <div>
-            <input type="text" name="customerNumber" placeholder="شماره تماس مشتری">
-            <input type="text" name="customerName" placeholder="نام مشتری">
-            <input type="text" name="phoneModel" placeholder="مدل دستگاه">
+            <input type="text" name="customerNumber" placeholder="شماره تماس مشتری" required>
+            <input type="text" name="customerName" placeholder="نام مشتری" required>
+            <input type="text" name="phoneModel" placeholder="مدل دستگاه" required>
         </div>
         <div>
-            <input type="text" name="IMEI1" placeholder="IMEI1">
-            <input type="text" name="IMEI2" placeholder="IMEI2">
-            <select name="capacity">
+            <input type="text" name="IMEI1" placeholder="IMEI1" required>
+            <input type="text" name="IMEI2" placeholder="IMEI2" required>
+            <select name="capacity" required>
               <option value="64 گیگابایت">64 گیگابایت</option>
               <option value="128 گیگابایت">128 گیگابایت</option>
               <option value="256 گیگابایت">256 گیگابایت</option>
@@ -32,7 +32,7 @@
             </select>
         </div>
         <div>
-          <input type="text" placeholder="رنگ" name="color">
+          <input type="text" placeholder="رنگ" name="color" required>
         </div>
 
         <button type="submit">ثبت</button>
