@@ -1,6 +1,7 @@
 {
     "port" : PORT,
     "secret" : "SECRET",
+    "adminNumber" : "",
 
     "db" : {
         "name" : "NAME",

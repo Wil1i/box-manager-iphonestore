@@ -42,6 +42,10 @@ const Request = db.define("requests", {
 
     color : {
         type : DataTypes.TEXT
+    },
+
+    partNumber : {
+        type : DataTypes.TEXT
     }
 })
 
