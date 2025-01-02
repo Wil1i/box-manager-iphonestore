@@ -33,7 +33,6 @@ const post = async (req, res) => {
     })
 
     sms.send(config.smsCodes.submitBoxRequest, req.body.customerNumber, [req.body.customerName, req.body.phoneModel])
-    sms.send(config.smsCodes.submitBoxRequestAdmin, config.adminNumber, [req.body.phoneModel, req.body.capacity, req.body.color, req.body.partNumber, req.body.IMEI1, req.body.IMEI2])
     log('ثبت درخواست جعبه', `درخواست جعبه ${req.body.phoneModel} برای ${req.body.customerName} با شماره ${req.body.customerNumber} ثبت شد.`, req.user.id)
 
     req.flash("success", "درخواست با موفقیت ثبت شد.")
