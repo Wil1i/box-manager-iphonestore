@@ -11,9 +11,12 @@
     </div>
     
     <div>
-        <% requests.forEach(request => { %>
+        <% requests.filter(s => s.status.includes("ناموجود")).forEach(request => { %>
             <%- include("../templates/request.ejs", {request}) -%>
         <% }) %>
+        <% requests.filter(s => !s.status.includes("ناموجود")).forEach(request => { %>
+          <%- include("../templates/request.ejs", {request}) -%>
+      <% }) %>
     </div>
   </div>
 </body>

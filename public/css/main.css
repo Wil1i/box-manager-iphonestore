@@ -122,3 +122,88 @@ a{
   color: rgb(48, 127, 216);
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 750px) {
+  #sideBar-container{
+    display: none;
+    position: fixed;
+    top: 50px;
+    width: 50%;
+  }
+
+  #sideBar-icon{
+    display: block !important;
+    height: 60px !important;
+  }
+
+  #check-container{
+    max-width: 90% !important;
+    width: 90% !important;
+    margin-top: 0 !important;
+  }
+
+  .hide-mobile{
+    display: none;
+  }
+
+  .small-mobile{
+    font-size: 12px;
+  }
+
+  #owner-mobile{
+    overflow: hidden;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+  }
+
+  .input-mobile{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-mobile > input{
+    width: 70% !important;
+    margin: 5px;
+  }
+  .input-mobile > select{
+    width: 70% !important;
+    margin: 5px;
+    margin-bottom: 0;
+  }
+
+  #s{
+    flex-direction: column;
+  }
+
+  #s > p{
+    margin: 5px;
+    text-align: center;
+  }
+
+  #s2{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  #s2 > input{
+    width: 90% !important;
+    margin: 5px;
+  }
+
+  #header-mobile{
+    font-size: 19px;
+  }
+
+  #status-mobile{
+    width: 50%;
+    text-align: center;
+    padding: 10px !important;
+    border-radius: 20px !important;
+  }
+}
+
+#sideBar-icon{
+  display: none;
+}

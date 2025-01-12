@@ -1,3 +1,13 @@
+<div id="sideBar-icon">  
+  <svg id="sideBar-icon" style="padding: 10px;width: 50px;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>  
+</div>
+
+<div id="black-bg" style="display: none; width: 100%; height: 100vh; background-color: black; position: fixed; top: 0; opacity: .2;">
+
+</div>
+
 <div id="sideBar-container">
   <h2>آیفون استور <small style="font-size: 10px;margin-right: -9px;">جعبه‌ها</small></h2>
 
@@ -11,3 +21,24 @@
   <% } %>
   <a href="/logout">خروج</a>
 </div>
+
+<script>
+  var sideBarIcon = document.getElementById("sideBar-icon")
+  var sideBarContainer = document.getElementById("sideBar-container")
+  var blackBg = document.getElementById("black-bg")
+
+  sideBarIcon.addEventListener("click", (e) => {
+    if(sideBarContainer.style.display == "flex"){
+      sideBarContainer.style.display = "none"
+      blackBg.style.display = "none"
+    }else{
+      sideBarContainer.style.display = "flex"
+      blackBg.style.display = "block"
+    }
+  })
+
+  blackBg.addEventListener("click", (e) => {
+    blackBg.style.display = "none"
+    sideBarContainer.style.display = "none"
+  })
+</script>
