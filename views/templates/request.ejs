@@ -1,5 +1,5 @@
 <div class="request-container">
-    <p id="imei-mobile"><%= toPersian(request.IMEI1)%></p>
+    <p id="imei-mobile"><%= toPersian(request.IMEI1.slice(-4))%></p>
     <p class="hide-mobile"><%=toPersian(request.customerName || "مالک ثبت نشده")%></p>
     <p><%=toPersian(request.phoneModel)%></p>
     <small class="hide-mobile"><%= toToday(request.createdAt) %></small>

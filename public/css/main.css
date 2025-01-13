@@ -133,12 +133,12 @@ a{
 
   #sideBar-icon{
     display: block !important;
-    height: 60px !important;
+    height: 30px !important;
   }
 
   #check-container{
-    max-width: 90% !important;
-    width: 90% !important;
+    max-width: 95% !important;
+    width: 95% !important;
     margin-top: 0 !important;
   }
 
@@ -201,6 +201,14 @@ a{
     text-align: center;
     padding: 10px !important;
     border-radius: 20px !important;
+  }
+
+  .btn{
+    font-size: 12px;
+  }
+
+  .request-container{
+    padding: 5px !important;
   }
 }
 
