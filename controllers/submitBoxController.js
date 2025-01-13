@@ -24,6 +24,7 @@ const post = async (req, res) => {
         status : "موجود در فروشگاه",
         capacity : req.body.capacity,
         color : req.body.color,
+        partNumber : "-"
     })
 
     log('ثبت جعبه', `جعبه ${req.body.phoneModel} در فروشگاه موجود شد.`, req.user.id)
