@@ -124,6 +124,16 @@ a{
 }
 
 @media only screen and (max-width: 750px) {
+  #log-mobile > div{
+    font-size: 10px;
+    padding: 3px !important;
+  }
+
+  #log-mobile > small{
+    font-size: 7px !important;
+    padding: 3px !important;
+  }
+
   #sideBar-container{
     display: none;
     position: fixed;
