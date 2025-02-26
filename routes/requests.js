@@ -6,6 +6,9 @@ const doneController = require("../controllers/requests/doneController")
 Router.get("/:id/done", isUserLoggedIn, doneController.get)
 Router.post("/:id/done", isUserLoggedIn, doneController.post)
 
+const returnController = require("../controllers/requests/returnController")
+Router.post("/:id/return", isUserLoggedIn, returnController.post)
+
 const singleController = require("../controllers/requests/singleController")
 Router.get("/:id", isUserLoggedIn, singleController.get)
 

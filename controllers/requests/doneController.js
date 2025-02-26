@@ -37,7 +37,7 @@ const post = async (req, res) => {
             customerNumber : req.body.number
         })
     
-        sms.send(config.smsCodes.boxOut, req.body.number, [req.body.name, findRequest.phoneModel])
+        sms.send(config.smsCodes.boxOut, findRequest.customerNumber, [findRequest.phoneModel])
         log("تحویل جعبه", `جعبه سریال ${findRequest.IMEI1} به ${findRequest.customerName} تحویل شد`, req.user.id)
 
     }

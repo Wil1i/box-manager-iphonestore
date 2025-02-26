@@ -50,13 +50,19 @@
             <% }else{ %>
               
               <form action="/requests/<%= request.id %>/done" method="post">
-                <button class="btn" type="submit">
+                <button class="btn" tyrpe="submit">
                   جعبه به فروشگاه رسید
                 </button>
               </form>
 
             <% } %>
 
+          <% }else{ %>
+            <form action="/requests/<%= request.id %>/return" method="post">
+              <button class="btn del-btn" type="submit">
+                برگشت جعبه به فروشگاه
+              </button> 
+            </form>
           <% } %>
         </div>
     </div>

@@ -17,6 +17,8 @@
 
     "smsCodes" : {
         "submitBoxRequest" : SMS_CODE,
-        "boxDelivered" : SMS_CODE
+        "boxDelivered" : SMS_CODE,
+        "boxOut" : SMS_CODE,
+        "adminSMS" : SMS_CODE
     }
 }
