@@ -33,9 +33,25 @@
 
               <% if(!request.customerName){ %>
 
-                <a class="btn" href="/requests/<%= request.id %>/done">
-                  جعبه تحویل داده شد
-                </a>
+                <% if(!request.blocked){ %>
+                  <a class="btn" href="/requests/<%= request.id %>/done">
+                    جعبه تحویل داده شد
+                  </a>
+
+                  <form action="/requests/<%= request.id %>/block" method="post">
+                  <button class="btn del-btn" type="submit">
+                    توقیف جعبه
+                  </button>
+                  <input type="text" name="blockedDescription" placeholder="دلیل توقیف جعبه">
+                </form>
+                <% }else{ %>
+                  <p style="color:red;">جعبه توقیف شده: <%= request.blockedDescription %></p>
+                  <form action="/requests/<%= request.id %>/block" method="post">
+                    <button class="btn del-btn" type="submit">
+                      رفع توقیف جعبه
+                    </button>
+                  </form>
+                <% } %>
 
               <% }else{ %>
                 <% if(!request.blocked){ %>
