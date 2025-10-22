@@ -54,6 +54,14 @@ const Request = db.define("requests", {
 
     blockedDescription : {
         type : DataTypes.TEXT
+    },
+
+    label : {
+        type : DataTypes.BOOLEAN
+    },
+
+    box : {
+        type : DataTypes.BOOLEAN
     }
 })
 

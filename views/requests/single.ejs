@@ -25,6 +25,10 @@
           <p>رنگ : <%= toPersian(request.color) %></p>
           <p>پارت‌نامبر : <%= toPersian(request.partNumber) || "-" %></p>
         </div>
+        <div style="display: flex; justify-content: space-around; ">
+          <p>لیبل  : <%= request.label ? 'ناموجود' : 'موجود' %></p>
+          <p>کارتن : <%= request.box ? 'ناموجود' : 'موجود' %></p>
+        </div>
 
         <div style="display: flex; justify-content: center;">
           <% if(request.status != "تحویل داده شد"){ %>

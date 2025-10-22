@@ -29,7 +29,9 @@ const post = async (req, res) => {
         status : "ناموجود در فروشگاه",
         capacity : req.body.capacity,
         partNumber : req.body.partNumber,
-        color : req.body.color
+        color : req.body.color,
+        label : req.body.label,
+        box : req.body.box
     })
 
     sms.send(config.smsCodes.submitBoxRequest, req.body.customerNumber, [req.body.customerName, req.body.phoneModel])
