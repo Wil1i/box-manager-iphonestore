@@ -1,7 +1,7 @@
 const Request = require("../../models/Request")
 
 const post = async (req, res) => {
-    const findRequest = await Request.findBePk(req.params.id)
+    const findRequest = await Request.findByPk(req.params.id)
 
     if(!findRequest) return res.status(401).json({ok : false, err : "Request not found"})
 
