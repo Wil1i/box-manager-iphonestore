@@ -38,6 +38,7 @@
                 </a>
 
               <% }else{ %>
+                <% if(!request.blocked){ %>
 
                 <form action="/requests/<%= request.id %>/done" method="post">
                   <button class="btn" type="submit">
@@ -45,6 +46,23 @@
                   </button>
                 </form>
 
+                <form action="/requests/<%= request.id %>/block" method="post">
+                  <button class="btn del-btn" type="submit">
+                    توقیف جعبه
+                  </button>
+                  <input type="text" name="blockedDescription" placeholder="دلیل توقیف جعبه">
+                </form>
+
+                <% }else{ %>
+
+                  <p style="color:red;">جعبه توقیف شده: <%= request.blockedDescription %></p>
+                  <form action="/requests/<%= request.id %>/block" method="post">
+                  <button class="btn del-btn" type="submit">
+                    رفع توقیف جعبه
+                  </button>
+                </form>
+
+                <% } %>
               <% } %>
             
             <% }else{ %>

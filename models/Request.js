@@ -46,6 +46,14 @@ const Request = db.define("requests", {
 
     partNumber : {
         type : DataTypes.TEXT
+    },
+
+    blocked : {
+        type : DataTypes.BOOLEAN
+    },
+
+    blockedDescription : {
+        type : DataTypes.TEXT
     }
 })
 
